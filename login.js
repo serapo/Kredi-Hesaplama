@@ -19,6 +19,7 @@ loginBtn.addEventListener('click',(e)=>{
     else if(bool==true){
       sonuclariGoster();
     }
+    
   
   }
 });
@@ -32,7 +33,7 @@ function kontrol()
 {
   const email=document.querySelector('#email');
   if(emailKontrolEt(email.value)){
-
+    bool=true;
       email.style.backgroundColor="white"; 
   }
   else{
@@ -40,22 +41,21 @@ function kontrol()
     bool=false;
     email.style.backgroundColor="#F0D0DD";
   }
+  
 }
 
 const sonuclariGoster = () => {
       const sonuclar=document.querySelector('.sonuclar');
-      sonuclar.innerHTML+=` <h2 class="mt-3 text-center">User Bilgileri</h2>
+      sonuclar.innerHTML=` <h2 class="mt-3 text-center">User Bilgileri</h2>
       <table class="table table-bordered border-warning  mt-4 w-50 m-auto ">
        <tbody class="center">
         <tr class="w-50">
           <th>Email </th>
           <td>${email.value} </td>
-         
-        </tr>
-        <tr class="w-50">
-        <th>Password</th>
+          <th>Password</th>
         <td>${"*".repeat((password.value).length)}</td>
-        </tr>
+         
+     
       </tbody>
     
     </table>`;
