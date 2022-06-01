@@ -1,3 +1,3 @@
-# Kredi-Hesaplama
+# Login Page
 
 ![](JS-Login.gif)
